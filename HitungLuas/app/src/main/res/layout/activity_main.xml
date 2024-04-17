@@ -8,34 +8,82 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_hitung"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:text="@string/btn_name"
+        android:layout_marginTop="224dp"
+        android:text="@string/btn_hitung"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/HeightInput" />
+        app:layout_constraintTop_toBottomOf="@+id/input" />
+
+    <Button
+        android:id="@+id/btn_keluar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="81dp"
+        android:text="@string/btn_keluar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_hitung"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/WidthInput"
+        android:id="@+id/input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="224dp"
         android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/btn_hitung"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/HeightInput"
+    <Button
+        android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/subtract"
+        app:layout_constraintTop_toBottomOf="@+id/input" />
+
+    <Button
+        android:id="@+id/subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="5dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="@+id/input"
+        app:layout_constraintTop_toBottomOf="@+id/input" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="*"
+        app:layout_constraintStart_toStartOf="@+id/add"
+        app:layout_constraintTop_toBottomOf="@+id/add" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="/"
+        app:layout_constraintStart_toStartOf="@+id/subtract"
+        app:layout_constraintTop_toBottomOf="@+id/subtract" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
         android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="@+id/WidthInput"
-        app:layout_constraintTop_toBottomOf="@+id/WidthInput" />
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/input"
+        app:layout_constraintStart_toStartOf="@+id/input" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
